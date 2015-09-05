@@ -7,8 +7,8 @@ defmodule Geom do
 	Calculates the area of a rectangle, provided width and height as parameters.
 	The height is implicitly equal to 1, if the argument is not provided
 
-		iex> Geom.area 5, 6
-		30
+	    iex> Geom.area 5, 6
+	    30
 
 	"""
 	def area(w, h \\ 1.0) when is_number(w) do
