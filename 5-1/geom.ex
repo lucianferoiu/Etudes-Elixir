@@ -12,8 +12,8 @@ defmodule Geom do
 		shape = prompt_shape |> shape_to_atom
 		IO.puts "Shape is #{shape}"
 		if shape != :quit do
-			p1 = prompt_number(1) |> String.to_float
-			p2 = prompt_number(2) |> String.to_float
+			p1 = prompt_number(1) |> String.to_integer
+			p2 = prompt_number(2) |> String.to_integer
 			val = area(shape,p1,p2)
 			IO.puts "Result: #{val}"
 			prompt_user
