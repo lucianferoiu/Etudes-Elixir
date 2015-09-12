@@ -6,9 +6,16 @@ defmodule College do
 	end
 
 	defp parse_rooms(hd,fd) do
-		case IO.readline(fd) do
-			
+		case IO.read(fd,:line) do
+			data -> add_course(hd,data,fd)
 			{:eof} -> hd
+			{:error, reason} ->
+				IO.puts("Error reading file: #{reason}")
+				hd
 		end
+	end
+
+	defp add_course(hd,data,fd) do
+		
 	end
 end
