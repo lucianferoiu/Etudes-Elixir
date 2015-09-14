@@ -13,7 +13,12 @@ defmodule Geo do
 	end
 
 	def parse_file(fd,countries) do
-		
+		case File.read(fd,:line) of
+			:eof -> countries
+			{:error,reason} -> IO.puts "Erorr reading file: #{reason}"
+			line ->
+				parse_file(fd,update_countries(countries,line))
+		end
 	end
 
 end
