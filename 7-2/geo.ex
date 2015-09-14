@@ -12,5 +12,8 @@ defmodule Geo do
 		countries = parse_file(fd,[])
 	end
 
+	def parse_file(fd,countries) do
+		
+	end
 
 end
