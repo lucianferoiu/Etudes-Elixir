@@ -7,7 +7,9 @@ defmodule City do
 end
 
 defmodule Geo do
-
+	def make_geo_list(filename) do
+	
+	end
 
 
 end
