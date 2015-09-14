@@ -8,7 +8,7 @@ end
 
 defmodule Geo do
 	def make_geo_list(filename) do
-	
+		{:ok, fd} = File.open(filename,[:read, :utf8])
 	end
 
 
