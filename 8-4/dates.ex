@@ -1,7 +1,7 @@
 defmodule Dates do
 
 	def julian(iso_date) do
-		IO.puts String.split(iso_date,"-") |> Enum.map(&String.to_integer/1) |> day_of_year
+		String.split(iso_date,"-") |> Enum.map(&String.to_integer/1) |> day_of_year
 	end
 
 	defp day_of_year([year,month,day]) when month>0 and day>0 and month<=12 and day<=31 and year>0 do
